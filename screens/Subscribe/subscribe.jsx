@@ -13,7 +13,7 @@ import "react-toastify/dist/ReactToastify.css"; // ✅ include toast styles
 import "./subscribe.css";
 
 const stripePromise = loadStripe(import.meta.env.VITE_NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 export default function SubscribePage() {
   const [clientSecret, setClientSecret] = useState(null);
   const [priceId, setPriceId] = useState(null);
@@ -21,7 +21,7 @@ export default function SubscribePage() {
 
   const token = typeof window !== "undefined" ? localStorage.getItem("token") || "" : "";
   const offer = typeof window !== "undefined" ? JSON.parse(localStorage.getItem("offer") || "{}") : {};
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
   useEffect(() => {
     (async () => {
       try {
@@ -29,7 +29,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
         else if (offer?.price_id) setPriceId(offer.price_id);
 
         const response = await axios.post(
-          `${API_BASE_URL}/subscriptions/cancel`,
+          `${API_BASE_URL}/billing/setup-intent`,
           {},
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -125,7 +125,7 @@ function CheckoutForm({ token, priceId }) {
         setSuccess(true);
         toast.success("✅ Plata efectuată cu succes!"); // ✅ success toast
         setTimeout(() => {
-          navigate("/tenant-dashboard");
+          navigate("/success");
           console.log("payment success", res.data);
         }, 1500);
       } else {

@@ -1,9 +1,9 @@
 import axios from "axios";
-import API_BASE_URL from "../../config/api/apiconfig";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 export const registerTenant = async (data) => {
   try {
-    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+    
     const response = await axios.post(`${API_BASE_URL}/auth/register`, data);
     return response.data;
   } catch (error) {
@@ -16,7 +16,7 @@ export const registerTenant = async (data) => {
 export const login = async (data) => {
   try {
     console.log(API_BASE_URL)
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
     const response = await axios.post(`${API_BASE_URL}/auth/login`, data);
     return response.data;
   } catch (error) {
@@ -49,7 +49,7 @@ export const forget = async (data) => {
   try {
     console.log(API_BASE_URL)
     console.log(data)
-    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+  
     const response = await axios.post(`${API_BASE_URL}/auth/forgot-password`, data);
     return response.data;
   } catch (error) {
@@ -72,7 +72,7 @@ export const code = async (data) => {
 
 
 export const resetPassword = async (data) => {
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+  
   try {
     const response = await axios.post(
       `${API_BASE_URL}/auth/reset-password`,
