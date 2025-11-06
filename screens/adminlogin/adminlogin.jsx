@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Lock, User, LogIn } from 'lucide-react';
-import './AdminLogin.css'; // import external CSS file
+import './adminlogin.css'; // import external CSS file
 
 export default function AdminLogin() {
   const [username, setUsername] = useState('');
