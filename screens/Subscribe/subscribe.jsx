@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import {
@@ -22,7 +21,7 @@ export default function SubscribePage() {
 
   const token = typeof window !== "undefined" ? localStorage.getItem("token") || "" : "";
   const offer = typeof window !== "undefined" ? JSON.parse(localStorage.getItem("offer") || "{}") : {};
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   useEffect(() => {
     (async () => {
       try {
@@ -30,7 +29,7 @@ export default function SubscribePage() {
         else if (offer?.price_id) setPriceId(offer.price_id);
 
         const response = await axios.post(
-          "https://tms.freelancerportfolio.me/api/billing/setup-intent",
+          `${API_BASE_URL}/subscriptions/cancel`,
           {},
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -112,7 +111,7 @@ function CheckoutForm({ token, priceId }) {
       console.log(payment_method, priceId);
 
       const res = await axios.post(
-        "https://tms.freelancerportfolio.me/api/subscriptions/start",
+         `${API_BASE_URL}/subscriptions/start`,
         { payment_method, price: priceId },
         {
           headers: {

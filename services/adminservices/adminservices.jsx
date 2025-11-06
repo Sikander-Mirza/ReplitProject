@@ -3,8 +3,8 @@
 export async function getDashboardMetrics() {
   try {
     const token = localStorage.getItem("token"); // ✅ get token from localStorage
-
-    const response = await fetch("https://tms.freelancerportfolio.me/api/metrics", {
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+    const response = await fetch(`${API_BASE_URL}/metrics`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -32,8 +32,8 @@ export async function getDashboardMetrics() {
 export async function getAdminUsers(page = 1) {
   try {
     const token = localStorage.getItem("token"); // ✅ read token
-
-    const response = await fetch(`https://tms.freelancerportfolio.me/api/admin/users?page=${page}`, {
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+    const response = await fetch( `${API_BASE_URL}/admin/users?page=${page}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

@@ -3,8 +3,8 @@ import API_BASE_URL from "../../config/api/apiconfig";
 
 export const registerTenant = async (data) => {
   try {
-    console.log(API_BASE_URL)
-    const response = await axios.post("https://tms.freelancerportfolio.me/api/auth/register", data);
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+    const response = await axios.post(`${API_BASE_URL}/auth/register`, data);
     return response.data;
   } catch (error) {
     console.error("Registration Error:", error.response?.data || error.message);
@@ -16,7 +16,8 @@ export const registerTenant = async (data) => {
 export const login = async (data) => {
   try {
     console.log(API_BASE_URL)
-    const response = await axios.post("https://tms.freelancerportfolio.me/api/auth/login", data);
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+    const response = await axios.post(`${API_BASE_URL}/auth/login`, data);
     return response.data;
   } catch (error) {
     console.error("Registration Error:", error.response?.data || error.message);
@@ -28,7 +29,7 @@ export const login = async (data) => {
 export const logout = async (token) => {
   try {
     const response = await axios.post(
-      "https://tms.freelancerportfolio.me/api/auth/logout",
+      `${API_BASE_URL}/auth/logout`,
       {},
       {
         headers: {
@@ -48,7 +49,8 @@ export const forget = async (data) => {
   try {
     console.log(API_BASE_URL)
     console.log(data)
-    const response = await axios.post("https://tms.freelancerportfolio.me/api/auth/forgot-password", data);
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+    const response = await axios.post(`${API_BASE_URL}/auth/forgot-password`, data);
     return response.data;
   } catch (error) {
     console.error("Registration Error:", error.response?.data || error.message);
@@ -60,7 +62,7 @@ export const forget = async (data) => {
 export const code = async (data) => {
   try {
     console.log(API_BASE_URL)
-    const response = await axios.post("https://tms.freelancerportfolio.me/api/auth/verify-reset-code", data);
+    const response = await axios.post(`${API_BASE_URL}/auth/verify-reset-code`, data);
     return response.data;
   } catch (error) {
     console.error("Registration Error:", error.response?.data || error.message);
@@ -70,9 +72,10 @@ export const code = async (data) => {
 
 
 export const resetPassword = async (data) => {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   try {
     const response = await axios.post(
-      "https://tms.freelancerportfolio.me/api/auth/reset-password",
+      `${API_BASE_URL}/auth/reset-password`,
       data
     );
     return response.data;
