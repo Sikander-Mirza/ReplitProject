@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Tenant.css'; 
+import './tenant.css'; 
 import { X, Building, Mail, Phone, Calendar, Activity, User } from 'lucide-react';
 
 const Tenant = () => {
