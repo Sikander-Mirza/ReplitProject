@@ -3,7 +3,7 @@ import { BarChart3,DollarSign,CircleCheckBig,TriangleAlert,Users,Target } from "
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,Cell,CartesianGrid } from "recharts";
 import "./analytics.css";
 import MonthlyComparison from "../../components/monthlycomparison/MonthlyComparison";
-import YearlyDashboard from "../../components/YearlyDashboard/YearlyDashboard";
+import YearlyDashboard from "../../components/yearlydashboard/YearlyDashboard.jsx";
 import RecentPayments from "../../components/recentpayment/RecentPayments";
 import InvoiceSummary from "../../components/invoicesummary/InvoiceSummary";
 import Alinsights from "../../components/AIInsights/aIinsights";
