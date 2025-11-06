@@ -1,7 +1,17 @@
 import React from 'react';
 import { CheckCircle, Star, ArrowRight, Gift } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function TransportSuccessPage() {
+
+  const navigate=useNavigate()
+
+const handledashboard=()=>{
+  console.log("button clicked")
+  navigate("/tenant-dashboard")
+}
+
+
   return (
     <div style={{
       background: 'linear-gradient(155deg, #121e3d 0%, #1e40af 50%, #121e3d 100%)',
@@ -160,6 +170,7 @@ export default function TransportSuccessPage() {
       }}
       onMouseOver={(e) => (e.currentTarget.style.transform = 'translateX(5px)')}
       onMouseOut={(e) => (e.currentTarget.style.transform = 'translateX(0)')}
+      onClick={handledashboard}
     >
       Începe să folosești sistemul
       <ArrowRight size={18} className="ms-2" />
