@@ -1,0 +1,82 @@
+/* === CARD STYLING === */
+.promo-card {
+  max-width: 900px;
+  background: rgba(17, 24, 39, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1)!important;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.promo-card .card-body {
+  background-color: #0c1f33;
+}
+
+.promo-card .card-body h3 {
+  color: white;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.promo-card .card-body p {
+  opacity: 0.8;
+  color: #c8cdd3;
+}
+
+/* === BUTTONS === */
+.btn-primary-custom {
+  background: linear-gradient(135deg, #3686f3 0%, #0891b2 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+  min-width: 220px;
+}
+
+.btn-outline-custom {
+  background-color: #000 !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white !important;
+  min-width: 220px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .promo-card .card-body {
+    padding: 2rem !important;
+  }
+
+  .promo-card .card-body h3 {
+    font-size: 1.3rem !important;
+  }
+
+  .promo-card .card-body p {
+    font-size: 0.9rem !important;
+  }
+
+  .promo-card {
+    max-width: 100% !important;
+    border-radius: 12px !important;
+  }
+
+  .btn-primary-custom,
+  .btn-outline-custom {
+    width: 100% !important;
+    font-size: 0.95rem !important;
+    padding: 0.9rem 1.2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-card .card-body {
+    padding: 1.5rem !important;
+  }
+
+  .promo-card .card-body h3 {
+    font-size: 1.1rem !important;
+  }
+
+  .promo-card .card-body p {
+    font-size: 0.85rem !important;
+  }
+}

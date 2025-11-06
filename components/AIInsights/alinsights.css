@@ -1,0 +1,291 @@
+/* Dashboard Container */
+.dashboard-container {
+  min-height: 100vh;
+ 
+  padding: 2rem 1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.seasonal-pattern{
+    border: 1px solid #6d2e1a;
+     border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.strategic-recommendation{
+    border: 1px solid #124028;
+     border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-analysis{
+    border: 1px solid #1c49c8;
+     border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(20, 20, 35, 0.6);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+   position: relative;
+  overflow: visible;
+}
+
+/* Header Styles */
+.dashboard-header {
+      position: static !important;
+  z-index: auto !important;
+  background: transparent !important;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+}
+
+.header-icon {
+  color: #a78bfa;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.dashboard-title1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dashboard-subtitle {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  
+}
+
+/* Insight Card Styles */
+.insight-card {
+  background: rgba(30, 30, 50, 0.8);
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.insight-card:hover {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 8px 16px rgba(139, 92, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+.card-header-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.section-icon {
+  color: #818cf8;
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #c7d2fe;
+  margin: 0;
+}
+
+.card-content {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Text Styles */
+.label-text {
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.content-text {
+  color: #d1d5db;
+}
+
+/* Highlight Colors */
+.highlight-green {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.highlight-red {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.highlight-cyan {
+  color: #06b6d4;
+  font-weight: 600;
+}
+
+.highlight-purple {
+  color: #a855f7;
+  font-weight: 600;
+}
+
+.highlight-white {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.highlight-year {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+/* Recommendation Items */
+.recommendation-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.recommendation-item:last-child {
+  margin-bottom: 0;
+}
+
+.recommendation-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .dashboard-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .dashboard-title {
+    font-size: 1.35rem;
+  }
+
+  .dashboard-subtitle {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .insight-card {
+    padding: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .card-content {
+    font-size: 0.9rem;
+  }
+
+  .recommendation-item {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-header {
+    text-align: center;
+  }
+
+  .dashboard-title {
+    font-size: 1.2rem;
+  }
+
+  .dashboard-subtitle {
+    font-size: 0.85rem;
+    
+  }
+
+  .card-header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .card-content {
+    font-size: 0.85rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .dashboard-container {
+    background: white;
+  }
+
+  .insight-card {
+    border: 1px solid #000;
+    page-break-inside: avoid;
+  }
+}
+
+
+.financial-alert-box {
+  background-color: #140b0b; /* dark background */
+  color: #ffbaba;
+  border: 1px solid rgba(255, 120, 120, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 80, 80, 0.05);
+}
+
+/* Title styling */
+.financial-alert-box h5 {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+/* Text styling */
+.financial-alert-box p {
+  color: #ffcaca;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .financial-alert-box {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .financial-alert-box svg {
+    margin-bottom: 0.5rem;
+  }
+}

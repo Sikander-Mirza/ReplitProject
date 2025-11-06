@@ -1,0 +1,487 @@
+/* Main Wrapper */
+.tenant-management-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1d2e 0%, #2d1b3d 100%);
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.tenant-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.header-section {
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-title {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.title-icon {
+  color: #4a9eff;
+}
+
+.page-subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.btn-add-tenant {
+  background: #4a9eff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(74, 158, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-add-tenant:hover {
+  background: #357abd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(74, 158, 255, 0.4);
+}
+
+/* Statistics Cards */
+.stat-card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card-blue {
+  background: linear-gradient(135deg, #4a9eff 0%, #357abd 100%);
+  box-shadow: 0 4px 20px rgba(74, 158, 255, 0.3);
+}
+
+.stat-card-green {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  box-shadow: 0 4px 20px rgba(46, 204, 113, 0.3);
+}
+
+.stat-card-orange {
+  background: linear-gradient(135deg, #ff6b35 0%, #e74c3c 100%);
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+}
+
+.stat-label {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.stat-value {
+  color: white;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.stat-icon {
+  color: white;
+  opacity: 0.8;
+}
+
+
+
+/* Tenant List Container */
+.tenant-list-container {
+  background: #09090b;
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tenant-list-title {
+  color: white;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.tenant-count-badge {
+ 
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  border-width: 1rem;
+  border-color: #ffffff;
+  font-size: 0.85rem;
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+/* Tenant Card */
+.tenant-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.tenant-card:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: rgba(74, 158, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.tenant-name {
+  color: white;
+  margin-bottom: 0;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-active {
+  background: #2ecc71;
+  color: white;
+}
+
+.status-inactive {
+  background: #e74c3c;
+  color: white;
+}
+
+.tenant-description {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.tenant-company {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+}
+
+.tenant-date {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.btn-edit {
+ 
+  border: 1px solid rgba(74, 158, 255, 0.3);
+  color: #ffffff;
+}
+
+.btn-edit:hover {
+  background: rgba(74, 158, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.btn-delete {
+  background: rgba(231, 76, 60, 0.2);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  color: #ffffff;
+}
+
+.btn-delete:hover {
+  background: rgba(231, 76, 60, 0.3);
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: #1a1d2e;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  color: white;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.modal-icon {
+  color: #a78bfa;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.modal-close-btn:hover {
+  opacity: 1;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+/* Form Elements */
+.form-label {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: block;
+}
+
+.required {
+  color: #e74c3c;
+}
+
+.form-input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  color: white;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4a9eff;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 3px rgba(74, 158, 255, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-select {
+  appearance: none; /* removes default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  color: #fff;
+  border: 1px solid #555;
+  padding-right: 2.5rem; /* space for custom arrow */
+  position: relative;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5.5l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+}
+
+.form-select option {
+  color: #fff;
+  background-color: #1a1a1a;
+}
+
+
+.form-select option {
+  background: #1a1d2e;
+  color: white;
+}
+
+/* Form Buttons */
+.btn-submit {
+  flex: 1;
+  background: #a78bfa;
+  border: none;
+  color: white;
+  padding: 0.875rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #9333ea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3);
+}
+
+.btn-cancel {
+  flex: 1;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.875rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tenant-management-wrapper {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .tenant-list-title {
+    font-size: 1.1rem;
+  }
+
+  .modal-content {
+    max-height: 95vh;
+  }
+
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .btn-add-tenant {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-title {
+    font-size: 1.3rem;
+  }
+
+  .page-title svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .tenant-card {
+    padding: 1rem;
+  }
+
+  .tenant-name {
+    font-size: 1rem;
+  }
+
+  .modal-header {
+    padding: 1rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .modal-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Scrollbar Styling */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+

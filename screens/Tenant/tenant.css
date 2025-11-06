@@ -1,0 +1,246 @@
+.container-lg{
+    max-width: 1230px;
+}
+
+
+
+.bg-dark-blue {
+  background: linear-gradient(90deg, #142248 0%, #2f2f82 100%);
+}
+
+.custom-title-color {
+  color: #5cb8e6;
+
+}
+
+.card-custom-dark {
+  background-color: #3042739a;
+  color: #fff;
+  border-color: white;
+  border-width: 1rem;
+}
+
+.btn-pro-blue {
+  background: linear-gradient(90deg, #3884f4 0%, #09b3d6 100%);
+  border-color: #5cb8e6;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.btn-pro-blue:hover {
+  background-color: #48a7d1;
+  border-color: #48a7d1;
+}
+
+.form-control-custom {
+  background-color: #445584;
+  border: 1px solid #4a5a8d;
+  color: #fff;
+  padding: 0.75rem 1rem;
+}
+.form-control-custom::placeholder {
+  color: #8892b0;
+}
+.form-control-custom:focus {
+  background-color: #445584;
+  border-color: #5cb8e6;
+  box-shadow: 0 0 0 0.25rem rgba(92, 184, 230, 0.25);
+  color: #fff;
+}
+
+.btn-green-submit {
+  background: linear-gradient(90deg, #21c461 0%, #11ba7f 100%);
+  border-color: #28a745;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.btn-green-submit:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-dark-cancel {
+  background-color: black;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.btn-dark-cancel:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.badge-active {
+  background-color: #28a745;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.3em 0.6em;
+}
+
+.tenant-card-item {
+  background-color: #3b4a7d;
+  color: #fff;
+}
+
+.username-highlight {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #81ace6;
+  font-weight: 100;
+}
+
+.bg-gradient-tenant-list {
+  box-shadow: 0 0 30px rgba(92, 184, 230, 0.1);
+}
+
+.right-block {
+  margin-top: 44px !important;
+  gap: 15rem !important;
+}
+
+.bi {
+  color: #fafafa;
+}
+
+.tenant-card-item .text-white-50 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* ------------------------------- */
+/* ✅ RESPONSIVE IMPROVEMENTS ONLY */
+/* ------------------------------- */
+@media (max-width: 991.98px) {
+  /* reduce large gaps and margins */
+  .right-block {
+    gap: 3rem !important;
+    margin-top: 20px !important;
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .tenant-card-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left;
+    padding: 1.25rem !important;
+  }
+
+  .tenant-card-item .d-flex {
+    flex-wrap: wrap !important;
+  }
+
+  .tenant-card-item h5 {
+    font-size: 1.1rem;
+  }
+
+  .right-block {
+    width: 100%;
+    gap: 1.2rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .tenant-card-item .badge-active {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .tenant-card-item .ms-lg-auto {
+    margin-left: 0 !important;
+  }
+
+  .tenant-card-item .justify-content-lg-between {
+    justify-content: flex-start !important;
+  }
+
+  .btn-pro-blue,
+  .btn-green-submit,
+  .btn-dark-cancel {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card-custom-dark,
+  .bg-gradient-tenant-list {
+    padding: 1.5rem !important;
+  }
+
+  .tenant-card-item .text-white-50 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  h1.custom-title-color {
+    font-size: 1.5rem !important;
+  }
+
+  .tenant-card-item {
+    padding: 1rem !important;
+  }
+
+  .form-control-custom {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .right-block {
+    gap: 1rem !important;
+  }
+
+  .tenant-card-item .d-flex.align-items-center.gap-2 {
+    gap: 0.5rem !important;
+  }
+}
+
+
+.tenant-card-item {
+  border: 1px solid #222;
+}
+
+.username-highlight {
+  background: rgba(129, 172, 230, 0.1);
+  color: #81ace6;
+}
+
+.right-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.tenant-detail span {
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+/* ✅ RESPONSIVE FIXES FOR MOBILE */
+@media (max-width: 768px) {
+  .tenant-card-item {
+    padding: 1rem;
+  }
+
+  .right-block {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .tenant-detail {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .tenant-detail span {
+    font-size: 0.85rem;
+  }
+
+  .tenant-card-item h5 {
+    font-size: 1rem;
+  }
+
+  .tenant-card-item .badge {
+    font-size: 0.7rem;
+  }
+
+  .tenant-card-item .username-highlight {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,97 @@
+/* === PAGE BACKGROUND === */
+.admin-login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #151e2c 0%, #2d3e5f 50%, #1f3572 100%);
+}
+
+/* === CARD === */
+.admin-login-card {
+  max-width: 500px;
+  width: 100%;
+  background-color: #1f2936;
+  border-radius: 16px;
+  border-color: #404754;
+}
+
+/* === ICON === */
+.login-icon-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #3c80f6 0%, #4f47e5 100%);
+  box-shadow: 0 8px 24px rgba(65, 105, 225, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* === TITLES === */
+.login-title {
+  color: #3f51e7;
+  font-size: 1.75rem;
+}
+
+.login-subtitle {
+  color: #b8c5d6;
+  font-size: 0.95rem;
+}
+
+/* === FORM INPUTS === */
+.login-label {
+  color: #d4dce8;
+  font-size: 0.95rem;
+}
+
+.input-group-text {
+  background-color: #2b3545;
+  color: #7a8ea8;
+  border: none;
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+}
+
+.input-group .form-control {
+  background-color: #2b3545;
+  color: #e8eef5;
+  border: none;
+  padding: 0.75rem;
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+
+.form-control::placeholder {
+  color: #6a7a8f;
+}
+
+.form-control:focus {
+  background-color: #1f2f45 !important;
+  color: #e8eef5 !important;
+  box-shadow: 0 0 0 0.25rem rgba(65, 105, 225, 0.25) !important;
+}
+
+/* === BUTTON === */
+.login-btn {
+  background: linear-gradient(135deg, #3c80f6 0%, #4f47e5 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 16px rgba(65, 105, 225, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(65, 105, 225, 0.4);
+}
+
+/* === FOOTER === */
+.login-footer {
+  color: #8494a8;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,395 @@
+/* Invoice Summary Container */
+.invoice-summary-container {
+  min-height: 100vh;
+  background: #000000;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.invoice-summary-card {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1400px;
+  overflow: hidden;
+}
+
+/* Header */
+.invoice-header {
+  padding: 2rem;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.invoice-title-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.invoice-icon {
+  color: #3b82f6;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.invoice-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+}
+
+.invoice-subtitle {
+  font-size: 0.95rem;
+  color: #888888;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Table */
+.invoice-table-wrapper {
+  overflow-x: auto;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice-table thead th {
+  text-align: left;
+  padding: 1.25rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #0a0a0a;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.invoice-table tbody tr {
+  border-bottom: 1px solid #1a1a1a;
+  transition: background 0.2s;
+}
+
+.invoice-table tbody tr:hover {
+  background: #0f0f0f;
+}
+
+.invoice-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.invoice-table tbody td {
+  padding: 1.5rem 2rem;
+  font-size: 0.95rem;
+  color: #cccccc;
+}
+
+/* Column Specific Styles */
+.col-period {
+  width: 35%;
+}
+
+.col-amount {
+  width: 25%;
+}
+
+.col-trend {
+  width: 15%;
+  text-align: center;
+}
+
+.col-change {
+  width: 25%;
+  text-align: left;
+}
+
+/* Period Column */
+.period-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.period-text {
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.period-badge {
+  background: #1e3a8a;
+  color: #60a5fa;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Amount Column */
+.amount-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Trend Column */
+.trend-icon-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.trend-emoji {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 48px;
+  height: 48px;
+}
+
+/* Change Column */
+.change-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.change-percentage {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.change-percentage.positive {
+  color: #10b981;
+}
+
+.change-percentage.negative {
+  color: #ef4444;
+}
+
+.change-label {
+  font-size: 0.75rem;
+  color: #ef4444;
+  font-weight: 500;
+}
+
+/* Footer */
+.invoice-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  background: #050505;
+  border-top: 1px solid #1a1a1a;
+}
+
+.footer-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-label {
+  font-size: 0.875rem;
+  color: #666666;
+  font-weight: 500;
+}
+
+.footer-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.footer-value-blue {
+  color: #3b82f6;
+}
+
+.footer-value-green {
+  color: #10b981;
+}
+
+.footer-value-orange {
+  color: #f97316;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .invoice-table thead th,
+  .invoice-table tbody td {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .invoice-summary-container {
+    padding: 1.5rem;
+  }
+
+  .invoice-header {
+    padding: 1.5rem;
+  }
+
+  .invoice-title {
+    font-size: 1.5rem;
+  }
+
+  .invoice-footer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-stat {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .footer-stat:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .invoice-summary-container {
+    padding: 1rem;
+  }
+
+  .invoice-header {
+    padding: 1.25rem;
+  }
+
+  .invoice-title-wrapper {
+    flex-direction: column;
+  }
+
+  .invoice-title {
+    font-size: 1.25rem;
+  }
+
+  .invoice-subtitle {
+    font-size: 0.875rem;
+  }
+
+  /* Make table scrollable on mobile */
+  .invoice-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .invoice-table {
+    min-width: 700px;
+  }
+
+  .invoice-table thead th,
+  .invoice-table tbody td {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .period-text {
+    font-size: 0.875rem;
+  }
+
+  .amount-text {
+    font-size: 0.95rem;
+  }
+
+  .trend-emoji {
+    font-size: 1.25rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .change-percentage {
+    font-size: 0.875rem;
+  }
+
+  .change-label {
+    font-size: 0.7rem;
+  }
+
+  .invoice-footer {
+    padding: 1.25rem;
+  }
+
+  .footer-value {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .invoice-summary-container {
+    padding: 0.75rem;
+  }
+
+  .invoice-header {
+    padding: 1rem;
+  }
+
+  .invoice-title {
+    font-size: 1.125rem;
+  }
+
+  .period-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .invoice-footer {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .footer-label {
+    font-size: 0.8rem;
+  }
+
+  .footer-value {
+    font-size: 1.125rem;
+  }
+}
+
+/* Smooth Transitions */
+.invoice-row {
+  transition: all 0.2s ease;
+}
+
+.trend-emoji {
+  transition: transform 0.2s ease;
+}
+
+.invoice-row:hover .trend-emoji {
+  transform: scale(1.1);
+}
+
+/* Custom Scrollbar */
+.invoice-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.invoice-table-wrapper::-webkit-scrollbar-track {
+  background: #0a0a0a;
+  border-radius: 4px;
+}
+
+.invoice-table-wrapper::-webkit-scrollbar-thumb {
+  background: #2d2d2d;
+  border-radius: 4px;
+}
+
+.invoice-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #3d3d3d;
+}

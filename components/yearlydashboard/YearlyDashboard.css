@@ -1,0 +1,97 @@
+body {
+  background-color: #0f0f10;
+}
+
+.yearly-dashboard {
+  color: #fff;
+}
+
+
+
+
+
+.bg-dark-2 {
+  background-color: #1a1c20;
+}
+
+.summary-card1 {
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  background-color: #0d1325;
+}
+
+.summary-card2 {
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  background-color: #0b1812;
+}
+
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 10px rgba(0, 255, 128, 0.1);
+}
+
+.text-muted {
+  color: #aaa !important;
+}
+
+.chart-card {
+  border: 1px solid #2a2d33;
+}
+
+h5 {
+  font-weight: 600;
+}
+
+
+.chart-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chart-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.chart-scroll::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.chart-scroll::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.chart-inner {
+  min-width: 650px; /* ensures scroll shows on small screens */
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .summary-card {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .chart-card {
+    padding: 1rem;
+  }
+}
+
+/* Mobile horizontal scroll for Pie Chart */
+@media (max-width: 768px) {
+  .pie-chart-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pie-chart-scroll > div {
+    min-width: 400px;
+  }
+}

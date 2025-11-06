@@ -1,0 +1,48 @@
+body {
+  background-color: #0f0f10;
+}
+
+.yearly-dashboard {
+  color: #fff;
+}
+
+.bg-dark-2 {
+  background-color: #1a1c20;
+}
+
+.summary-card {
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 10px rgba(0, 255, 128, 0.1);
+}
+
+.text-muted {
+  color: #aaa !important;
+}
+
+.chart-card {
+  border: 1px solid #2a2d33;
+}
+
+h5 {
+  font-weight: 600;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .summary-card {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .chart-card {
+    padding: 1rem;
+  }
+}
